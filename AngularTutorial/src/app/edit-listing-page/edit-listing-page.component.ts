@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-listing-page',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./edit-listing-page.component.css']
 })
 export class EditListingPageComponent {
+  router: Router;
+  constructor() { }
 
+  ngOnInit(): void {
+
+  }
+
+  onSubmit(): void {
+    alert('Saving changes to the listing...')
+    this.router.navigateByUrl('/my-listings')
+  }
 }
