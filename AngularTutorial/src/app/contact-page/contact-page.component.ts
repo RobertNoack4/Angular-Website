@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { Listing } from '../types';
 import { fakeListings } from '../fake-data';
-import { FormsModule } from '@angular/forms';
 
 
 @Component({
