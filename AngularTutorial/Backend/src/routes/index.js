@@ -4,6 +4,7 @@ import { addViewToListingRoute } from "./addViewToListing.js";
 import { updateListingRoute } from "./updateListing.js";
 import { createNewListingRoute } from "./createNewListing.js";
 import { getUserListingsRoute } from "./getUserListings.js";
+import { deleteListingRoute } from "./deleteListing.js";
 
 export default [
     addViewToListingRoute,
@@ -12,4 +13,5 @@ export default [
     updateListingRoute,
     createNewListingRoute,
     getUserListingsRoute,
+    deleteListingRoute,
 ]
