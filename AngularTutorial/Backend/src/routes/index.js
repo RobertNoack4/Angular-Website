@@ -1,13 +1,15 @@
-import { getAllListingsRoute } from "./getAllListingsRoute.js";
-import { getListingsRoute } from "./getListingRoute.js";
+import { getAllListingsRoute } from "./getAllListings.js";
+import { getListingRoute } from "./getListing.js";
 import { addViewToListingRoute } from "./addViewToListing.js";
+import { updateListingRoute } from "./updateListing.js";
+import { createNewListingRoute } from "./createNewListing.js";
 import { getUserListingsRoute } from "./getUserListings.js";
-import { createNewListingsRoute} from "./createNewListings.js";
 
 export default [
     addViewToListingRoute,
     getAllListingsRoute,
-    createNewListingsRoute,
-    getListingsRoute,
+    getListingRoute,
+    updateListingRoute,
+    createNewListingRoute,
     getUserListingsRoute,
 ]
