@@ -14,4 +14,4 @@ export const getListingsRoute = {
         if(!listing) throw Boom.notFound(`Listing does not exist with id ${id}`)
         return listing;
     }
-}
+};
