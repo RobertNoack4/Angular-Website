@@ -10,7 +10,6 @@ export const getUserListingsRoute = {
             'SELECT * FROM listings WHERE user_id=?',
             [userId],
         );
-
         return results;
     }
 }
