@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Auth, getAuth } from "firebase/auth";
 import firebase from 'firebase/compat/app'
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import 'firebase/compat/auth'
+import { LogService } from './log.service';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +15,20 @@ export class AppComponent {
 
   constructor(
     public auth: AngularFireAuth,
+    private logger: LogService,
   ) {}
 
   signInClicked(): void {
-    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    //this.logger.log 
+    this.logger.log("Test1");
+    try{
+      this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider).catch();
+    }
+    catch(error){
+      this.logger.log(error)
+    }
   }
-
+  
   signOutClicked(): void {
     this.auth.signOut()
   }

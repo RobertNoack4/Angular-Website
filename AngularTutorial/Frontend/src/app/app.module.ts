@@ -15,7 +15,9 @@ import { NewListingPageComponent } from './new-listing-page/new-listing-page.com
 import { EditListingPageComponent } from './edit-listing-page/edit-listing-page.component';
 import { ListingDataFormComponent } from './listing-data-form/listing-data-form.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { environment } from '../environments/environment'; 
+import { environment } from '../environments/environment';
+import { LogTestComponent } from './log-test/log-test.component'; 
+import { LogService } from './log.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { environment } from '../environments/environment';
     NewListingPageComponent,
     EditListingPageComponent,
     ListingDataFormComponent,
-    NavBarComponent
+    NavBarComponent,
+    LogTestComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,7 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
