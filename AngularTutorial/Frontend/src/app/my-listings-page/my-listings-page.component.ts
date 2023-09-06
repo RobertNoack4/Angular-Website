@@ -21,8 +21,7 @@ export class MyListingsPageComponent {
   onDeleteClicked(listingId: string): void {
     this.listingService.deleteListing(listingId).subscribe(() => {
       this.listings = this.listings.filter(
-        listing => listing.id !== listingId);
+        listing => listing.id !== listingId)
     })
   }
-
 }
